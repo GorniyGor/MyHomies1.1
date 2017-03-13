@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Profile</string>
+    <string name="edit_surname">Enter you surname</string>
+    <string name="edit_name">Enter you name</string>
+    <string name="edit_date">Enter date</string>
+    <string name="button_save">Save</string>
+    <string name="button_edit">Edit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textviewDate">Date:</string>
+</resources>
