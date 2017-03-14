@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import android.widget.TextView;
 
 
 public class fragmentActivity2 extends Fragment {
+
+    final String LOG_TAG = "myLogs";
 
     private TextView name;
     private TextView surname;
@@ -27,13 +30,8 @@ public class fragmentActivity2 extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        name = (TextView) getActivity().findViewById(R.id.Name);
-        surname = (TextView) getActivity().findViewById(R.id.Surname);
-        date = (TextView) getActivity().findViewById(R.id.Date);
 
-        name.setText(getActivity().getIntent().getStringExtra("name"));
-        surname.setText(getActivity().getIntent().getStringExtra("surname"));
-        date.setText(getActivity().getIntent().getStringExtra("date"));
+        Log.d(LOG_TAG, "Fragment2 onCreate");
 
     }
 
@@ -41,6 +39,16 @@ public class fragmentActivity2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_activity_main, container, false);
+
+        name = (TextView) v.findViewById(R.id.Name);
+        surname = (TextView) v.findViewById(R.id.Surname);
+        date = (TextView) v.findViewById(R.id.Date);
+
+        name.setText(getActivity().getIntent().getStringExtra("name"));
+        surname.setText(getActivity().getIntent().getStringExtra("surname"));
+        date.setText(getActivity().getIntent().getStringExtra("date"));
+
+        Log.d(LOG_TAG, "Fragment2 onCreateView1");
 
         Button button = (Button) v.findViewById(R.id.buttonEdit);
         button.setOnClickListener(new View.OnClickListener() {
@@ -57,6 +65,7 @@ public class fragmentActivity2 extends Fragment {
 
             }
         });
+        Log.d(LOG_TAG, "Fragment2 onCreateView2");
 
 
         return v;
