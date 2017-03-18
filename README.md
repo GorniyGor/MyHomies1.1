@@ -6,5 +6,5 @@ TODO
 - Add onFocusChangedListener
 - Change findViewById on link
 <p><strong>IaI (interesting and important)</strong></p>
-- Icepick library (data transfer between activities, simpler than only saveInstanceState)
+<li>Icepick library (data transfer between activities, simpler than only saveInstanceState)</li>
 
