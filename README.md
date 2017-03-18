@@ -5,6 +5,6 @@ TODO
 - Save date-data when orientation is changed
 - Add onFocusChangedListener
 - Change findViewById on link
-</bold>IaI (interesting and important)</>
+<strong>IaI (interesting and important)</strong>
 -Icepick library (data transfer between activities, simpler than only saveInstanceState)
 
